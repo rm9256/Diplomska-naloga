@@ -185,11 +185,11 @@ void controlLEDsPositive(float tiltAngleX) {
   } 
   else if (tiltAngleX > 25 && tiltAngleX <= 39) {
     //Sport ride
-    activeLEDs = min(int((tiltAngleX - 25) / 2.67), SPORT_RIDE_LEDS) + NORMAL_RIDE_LEDS;
+    activeLEDs = min(int((tiltAngleX - 25) / 2.8), SPORT_RIDE_LEDS) + NORMAL_RIDE_LEDS;
   } 
   else if (tiltAngleX > 39 && tiltAngleX <= 51) {
     //Near limit
-    activeLEDs = min(int((tiltAngleX - 39) / 2.33), SPORT_RIDE_LEDS) + NORMAL_RIDE_LEDS + SPORT_RIDE_LEDS;
+    activeLEDs = min(int((tiltAngleX - 39) / 2.4), SPORT_RIDE_LEDS) + NORMAL_RIDE_LEDS + SPORT_RIDE_LEDS;
   } 
   else if (tiltAngleX > 51) {
     //Crash imminent
@@ -208,11 +208,11 @@ void controlLEDsNegative(float tiltAngleX) {
   } 
   else if (tiltAngleX < -25 && tiltAngleX >= -39) {
     //Sport ride
-    activeLEDs = min(int(((-tiltAngleX) - 25) / 2.67), SPORT_RIDE_LEDS) + NORMAL_RIDE_LEDS;
+    activeLEDs = min(int(((-tiltAngleX) - 25) / 2.8), SPORT_RIDE_LEDS) + NORMAL_RIDE_LEDS;
   } 
   else if (tiltAngleX < -39 && tiltAngleX >= -51) {
     //Near limit
-    activeLEDs = min(int(((-tiltAngleX) - 39) / 2.33), SPORT_RIDE_LEDS) + NORMAL_RIDE_LEDS + SPORT_RIDE_LEDS;
+    activeLEDs = min(int(((-tiltAngleX) - 39) / 2.4), SPORT_RIDE_LEDS) + NORMAL_RIDE_LEDS + SPORT_RIDE_LEDS;
   } 
   else if (tiltAngleX < -51) {
     //Crash imminent
